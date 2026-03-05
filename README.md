@@ -27,6 +27,12 @@ uv run streamlit run app.py
 uv run pytest -q
 ```
 
+Chequeo rápido de importación:
+
+```bash
+uv run python -c "import app; print('ok')"
+```
+
 ## 🧭 Flujo de uso (paso a paso)
 
 1. Cargar un archivo `.xlsx`.
@@ -117,6 +123,18 @@ Salida esperada:
 - `src/application`: reglas de negocio y transformación.
 - `src/infrastructure`: lectura de Excel, escritura CSV y perfiles.
 - `tests`: pruebas unitarias.
+
+## 🤝 Contribuir
+
+- Sigue la guía de contribución en [`AGENTS.md`](AGENTS.md).
+- Usa commits con Conventional Commits (ejemplos):
+  - `feat: add sheet-level mapping validation`
+  - `fix: handle summary rows before prefixing`
+  - `docs: improve README troubleshooting`
+- Antes de abrir PR:
+  1. Ejecuta `uv run pytest -q`.
+  2. Verifica que la app corra con `uv run streamlit run app.py`.
+  3. Incluye una descripción corta del cambio y evidencia (tests/screenshot si cambia UI).
 
 ## ℹ️ Notas
 
